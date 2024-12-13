@@ -1,0 +1,108 @@
+name:
+  first: Alex
+  middle:
+  last: Dupont
+about:
+  Passionate about .Net and mobile development, I am always looking for new technologies and challenges to tackle.<br>
+  Working in a team, I split my time between design, development, and support.<br>
+  I bring my technical expertise and experience to successfully complete projects and assist developers.
+position: Senior .Net and Mobile Developer
+location: Paris, France
+
+birth:
+  year: 1985
+  location: Paris, France
+
+experience:
+  - company: TechCorp
+    position: Senior .Net Developer
+    timeperiod: 2021 - 2024
+    description:
+      Design and development of backend solutions, implementation of CI/CD processes, and system migration.<br>
+      Actively engaged in local community tech meetups, sharing knowledge and best practices on .Net and mobile development.<br>
+      Delivered public speaking sessions at various conferences, focusing on emerging technologies and development methodologies.<br>
+      <br />
+      <strong>Skills :</strong> .Net Core/Entity Framework/Azure DevOps/Kubernetes/SignalR
+
+  - company: MobileSoft
+    position: Lead Mobile Developer
+    timeperiod: 2018 - 2021
+    description:
+      Mobile application development, migration to new technologies, and developer support.<br>
+      Led a team of developers to deliver high-quality mobile applications, ensuring adherence to best practices and coding standards.<br>
+      Conducted code reviews, mentored junior developers, and facilitated knowledge sharing sessions.<br>
+      Collaborated with cross-functional teams to define project requirements and deliver solutions on time and within budget.<br>
+      <br />
+      <strong>Skills :</strong> Xamarin/Flutter/Dart/CI/CD/Firebase
+
+  - company: DevSolutions
+    position: Technical Expert .Net
+    timeperiod: 2017 - 2018
+    description:
+      Architecture and technical support for microservices-oriented applications.<br>
+      <br />
+      <strong>Skills :</strong> .Net Core/ASP.Net/Web API/Azure Functions/Docker
+
+  - company: CodeFactory
+    position: Technical Expert
+    timeperiod: 2016 - 2017
+    description:
+      Participation in technical expertise projects and implementation of internal tools for development teams.<br>
+      <br />
+      <strong>Skills :</strong> JavaScript/React/Node.js/AWS/Jenkins
+
+  - company: SoftWareHouse
+    position: Fullstack Developer
+    timeperiod: 2013 - 2016
+    description:
+      Development of frontend and backend solutions, and developer support for various applications.<br>
+      <br />
+      <strong>Skills :</strong> C#/ASP.Net/MVC/Angular/SQL Server
+
+  - company: InfoTech
+    position: .Net Developer
+    timeperiod: 2011 - 2012
+    description:
+      Development and maintenance of .Net applications, setup of development environments, and developer support.<br>
+      <br />
+      <strong>Skills :</strong> .Net Framework/WPF/WinForms/SQL
+
+  - company: CodeMasters
+    position: Analyst Developer
+    timeperiod: 2006 - 2011
+    description:
+      Design and development of management applications for various clients using .Net technologies.<br>
+      <br />
+      <strong>Skills :</strong> .Net Framework/ASP.Net/SQL Server
+
+education:
+  - degree: Master's in Computer Science
+    school: University of Technology
+    timeperiod: 2006
+
+# skill level goes 0 to 100
+skills:
+  - name: .Net Core
+    level: 90
+  - name: Xamarin
+    level: 85
+  - name: Azure DevOps
+    level: 80
+  - name: SQL Server
+    level: 75
+  - name: Flutter
+    level: 70
+  - name: CI/CD
+    level: 80
+knowledge:
+
+hobbies:
+  - name: Cycling
+    iconClass: fa fa-bicycle
+  - name: Photography
+    iconClass: fa fa-camera
+  - name: Video Games
+    iconClass: fa fa-gamepad
+
+# en, de, fr, pt, ca, cn, it, es, th, pt-br, ru, sv, id, hu, pl, ja, ka, nl, he, zh-tw, lt, ko, el, nb-no
+lang: en

@@ -1,0 +1,64 @@
+@page {
+  margin-top: 0.5cm;
+}
+
+.page {
+  width: 21cm;
+  //height: 29.7cm * 2;
+  background-color: white;
+  font-size: 0.9em;
+  font-weight: 300;
+  line-height: initial;
+  @media print {
+    margin-top: -0.5cm;
+  }
+
+  ul {
+    list-style-type: initial;
+    margin-left: 0.7cm;
+    li {
+      margin-top: 2pt;
+    }
+  }
+
+  .mugshot {
+    margin: -90px 1cm -1cm auto;
+
+    img {
+      width: 128px;
+      border-radius: 50%;
+    }
+  }
+
+  .headline {
+    color: #294466;
+    font-size: 1.3em;
+    font-weight: bold;
+  }
+
+  .content {
+    padding: 0 0.5cm 1cm 0.5cm;
+    //font-weight: 300;
+
+    .section-title {
+      page-break-before: auto;
+      font-weight: 500;
+      font-size: 1.2em;
+      margin-bottom: 0.3cm;
+      margin-top: 0.5cm;
+      color: #294466;
+    }
+
+    .section-content {
+      margin-left: 0.5cm;
+
+      .section-content__item {
+        //padding-top: 0.5cm;
+        //margin-bottom: -0.5cm;
+        page-break-before: avoid;
+        page-break-after: auto;
+        page-break-inside: avoid;
+      }
+    }
+  }
+}

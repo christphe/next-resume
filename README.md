@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+This is next resume, a project very heavily inspired by [salomonelli/best-resume-ever](https://github.com/salomonelli/best-resume-ever).
+
+It is a modern web application built with Next.js that allows users to create and customize their resumes. The project leverages Tailwind CSS for styling and Puppeteer for exporting resumes to PDF format. Users can edit their resume data in YAML files, making it easy to manage and update their information.
 
 ## Getting Started
 
@@ -6,31 +8,31 @@ First, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000/resume/en/two-pages](http://localhost:3000/resume/en/two-pages) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Fill data
 
-## Learn More
+# Documentation on Editing Resume Data
 
-To learn more about Next.js, take a look at the following resources:
+To edit the resume data, follow these steps:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Copy Example Data Files**:
+    - Copy the `example.data.yml` file to a new file named `data-[lang].yml`, where `[lang]` is the language code you want to use (e.g., `data-en.yml` for English, `data-fr.yml` for French).
+    - Copy the `example.contact.yml` file to a new file named `contact.yml`. if you don't, no contact information will be displayed (useful for public resume to avoid scraping)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. **Edit the Information**:
+    - Open the newly created `data-[lang].yml` file and update the resume information as needed. This file contains the main content of the resume, such as work experience, education, skills, and other relevant sections.
+    - Open the `contact.yml` file and update the contact information. This file contains personal details such as name, email, phone number, and address.
+    - Copy your photo as `id.jpg` in the `public/img` folder.
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+By following these steps, you can customize the resume data to fit your specific needs.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Export
+
+if server is started, you can run `npm run pdf`, else, run `npm run export`.
+Pdf files will be generated in the `pdf` directory.
+
