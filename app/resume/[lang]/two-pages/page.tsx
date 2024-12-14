@@ -96,7 +96,7 @@ export default async function Resume(props: ResumeProps) {
               <div className="section-title headline">
                 <HistoryIcon
                   width={20}
-                  className="inline-block align-text-bottom mr-1"
+                  className="inline-block align-middle mr-1"
                 />
                 Experience
               </div>
