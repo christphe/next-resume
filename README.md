@@ -13,9 +13,7 @@ npm run dev
 Open [http://localhost:3000/resume/en/two-pages](http://localhost:3000/resume/en/two-pages) with your browser to see the result.
 
 
-## Fill data
-
-# Documentation on Editing Resume Data
+## Editing Resume Data
 
 To edit the resume data, follow these steps:
 
