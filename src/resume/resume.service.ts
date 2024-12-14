@@ -1,4 +1,3 @@
-// app/services/resume.ts
 import { promises as fs } from "fs";
 import yaml from "js-yaml";
 
@@ -17,10 +16,6 @@ export interface ResumeData {
   about: string;
   position: string;
   location: string;
-  birth: {
-    year?: number;
-    location?: string;
-  };
   experience: Array<{
     company: string;
     position: string;
