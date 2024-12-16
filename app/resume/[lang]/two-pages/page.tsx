@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import "./page.scss";
+import { appContext } from "@/src/app";
 
 interface ResumeProps {
   params: Promise<{ lang: string }>;
@@ -18,7 +19,7 @@ interface ResumeProps {
 
 export default async function Resume(props: ResumeProps) {
   const { lang } = await props.params;
-  const resumeService = new ResumeService(process.cwd());
+  const resumeService = appContext.resumeService;
 
   const data = await resumeService.loadResume(lang);
 

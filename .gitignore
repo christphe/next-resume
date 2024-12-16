@@ -36,8 +36,8 @@ yarn-error.log*
 next-env.d.ts
 
 # personal data
-public/data/data-*.yml
-public/data/contact.yml
+data/data-*.yml
+data/contact.yml
 public/img/id.jpg
 
 # dist
