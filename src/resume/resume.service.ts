@@ -45,7 +45,7 @@ export class ResumeService {
     private resumeRepository: ResumeRepository = new ResumeFileRepository(process.cwd(), "/data/")
   ) {}
 
-  async loadResume(lang?: string): Promise<ResumeData> {
+  async getResume(lang?: string): Promise<ResumeData> {
     const resume = await this.resumeRepository.getResumeByLang(lang ?? "en");
     if (resume == null) {
       throw new Error("Resume not found");
@@ -59,5 +59,13 @@ export class ResumeService {
       return await this.resumeRepository.getSampleImagePath();
     }
     return imagePath;
+  }
+
+  async getSampleResume(): Promise<ResumeData> {
+    return await this.resumeRepository.getSampleResume();
+  }
+
+  async getSampleImagePath(): Promise<string> {
+    return await this.resumeRepository.getSampleImagePath();
   }
 }

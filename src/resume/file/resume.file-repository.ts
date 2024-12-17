@@ -8,8 +8,8 @@ import {
 
 export class ResumeFileRepository implements ResumeRepository {
   constructor(
-    private readonly basePath: string = process.cwd(),
-    private readonly resumesDir = "/data/"
+    private readonly basePath: string,
+    private readonly resumesDir: string
   ) {}
 
   private getFilePath(lang?: string): string {

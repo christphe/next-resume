@@ -1,5 +1,5 @@
 import { usei18n } from "@/src/i18n/i18n";
-import { ResumeService } from "@/src/resume/resume.service";
+import { ResumeData, ResumeService } from "@/src/resume/resume.service";
 import {
   FlaskConicalIcon,
   GraduationCapIcon,
@@ -14,17 +14,27 @@ import "./page.scss";
 import { appContext } from "@/src/app";
 
 interface ResumeProps {
-  params: Promise<{ lang: string }>;
+  params: Promise<{ lang: string | "sample" }>;
 }
 
 export default async function Resume(props: ResumeProps) {
   const { lang } = await props.params;
   const resumeService = appContext.resumeService;
 
-  const data = await resumeService.loadResume(lang);
+  let data: ResumeData;
+  let resumeLang: string;
+  let imagePath: string;
+  if (lang !== "sample") {
+    data = await resumeService.getResume(lang);
+    imagePath = await resumeService.getImagePath();
+  } else {
+    data = await resumeService.getSampleResume();
+    imagePath = await resumeService.getSampleImagePath();  
+  }
+  resumeLang = data.lang;
 
-  const imagePath = await resumeService.getImagePath();
-  const { t } = await usei18n(lang);
+
+  const { t } = await usei18n(resumeLang);
 
   return (
     <div className="page">
@@ -72,7 +82,7 @@ export default async function Resume(props: ResumeProps) {
                   width={20}
                   className="inline-block align-text-bottom mr-1"
                 />
-                { t("resume.aboutme") }
+                {t("resume.aboutme")}
               </div>
               <div
                 className="section-content"
@@ -80,13 +90,13 @@ export default async function Resume(props: ResumeProps) {
               ></div>
             </div>
             <div className="skills-section section">
-                <div className="section-title headline">
+              <div className="section-title headline">
                 <FlaskConicalIcon
                   width={20}
                   className="inline-block align-text-bottom mr-1"
                 />
-                { t("resume.skills") }
-                </div>
+                {t("resume.skills")}
+              </div>
               <div className="section-content grid grid-cols-3">
                 {data.skills.map((skill, index) => (
                   <div key={index} className="section-content__item">
@@ -101,7 +111,7 @@ export default async function Resume(props: ResumeProps) {
                   width={20}
                   className="inline-block align-middle mr-1"
                 />
-                { t("resume.experience") }
+                {t("resume.experience")}
               </div>
               <div className="section-content">
                 {data.experience.map((exp, index) => (
@@ -127,13 +137,13 @@ export default async function Resume(props: ResumeProps) {
               </div>
             </div>
             <div className="section">
-                <div className="section-title headline">
+              <div className="section-title headline">
                 <GraduationCapIcon
                   width={20}
                   className="inline-block align-text-bottom mr-1"
                 />
-                { t("resume.education") }
-                </div>
+                {t("resume.education")}
+              </div>
               <div className="section-content">
                 {data.education.map((edu, index) => (
                   <div key={index} className="ml-[0.5cm]">
